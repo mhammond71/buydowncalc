@@ -96,7 +96,7 @@ function calc(){
   const from=sched.length+1;
   rows+=`<tr><td>${sched.length?"Year "+from+" onward":"All years"}</td><td>${rate}%</td><td>${money(base)}</td><td>${money(pmi)}</td><td>${money(base+pmi)}</td><td>${money(0)}</td><td>${money(0)}</td></tr>`;
   $("rows").innerHTML=rows;
-  $("foot").innerHTML=sched.length?`<tr><td colspan="6">Total buy-down cost (${sched.length} yr period) <b>NEVER LOST!<b></td><td>${money(total)}</td></tr>`:"";
+  $("foot").innerHTML=sched.length?`<tr><td colspan="6">Total buy-down cost (${sched.length} yr period) <b><font color="yellow">NEVER LOST!</font><b></td><td>${money(total)}</td></tr>`:"";
   const first=sched.length?Math.max(0,rate-sched[0]):rate;
   const firstPay=pmt(P,first,yrs)+pmi;
   $("stats").innerHTML=
